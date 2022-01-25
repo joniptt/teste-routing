@@ -4,6 +4,10 @@
   margin-top: 5%;
 }
 
-div {
-  float: left;
+.comp {
+  flex-direction: column;
+  display: flex;
+}
+.serve {
+  margin-top: 60px;
 }
