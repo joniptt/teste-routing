@@ -1,4 +1,14 @@
 <label class="bold" for=""><b>Server Name</b></label>
-<input type="text" />
-<label for=""><b>Server Status</b></label>
-<input type="text" />
+<div>
+    <input class="form-control" [(ngModel)]="serverName" type="text" />
+</div>
+<label class="bold "for=""><b>Server Status</b></label>
+<div>
+    <select class="custom-select" id="inputGroupSelect01">
+        <option value="1">Online</option>
+        <option value="2">Offline</option>
+      </select>
+</div>
+<button (click)="updateServer()" class="btn btn-primary">Update server</button>
+<hr>
+<p *ngIf="showStatus">{{ serverName }}</p>

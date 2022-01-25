@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servers.component.css'],
 })
 export class ServersComponent implements OnInit {
-  servers = [];
+  servers = ['Productionserver','Testserver', 'Devserver'];
   constructor() {}
   
   ngOnInit(): void {}

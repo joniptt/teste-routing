@@ -1,5 +1,8 @@
 <div>
   <ul class="list-group">
-    <li class="list-group-item">Cras justo odio</li>
+    <a *ngFor="let server of servers" class="list-group-item list-group-item-action">{{ server }}</a>
   </ul>
+</div>
+<div class="edit">
+  <app-edit></app-edit>
 </div>

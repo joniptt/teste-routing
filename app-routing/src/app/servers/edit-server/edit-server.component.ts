@@ -5,4 +5,10 @@ import { Component } from '@angular/core';
   templateUrl: './edit-server.component.html',
   styleUrls: ['./edit-server.component.css'],
 })
-export class EditComponent {}
+export class EditComponent {
+  serverName =""
+  showStatus = false
+  updateServer(){
+    this.showStatus = true
+  }
+}
