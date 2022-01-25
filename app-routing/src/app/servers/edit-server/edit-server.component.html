@@ -4,11 +4,11 @@
 </div>
 <label class="bold "for=""><b>Server Status</b></label>
 <div>
-    <select class="custom-select" id="inputGroupSelect01">
-        <option value="1">Online</option>
-        <option value="2">Offline</option>
+    <select class="custom-select" [(ngModel)]="selectedStatus">
+        <option value="Online">Online</option>
+        <option value="Offline">Offline</option>
       </select>
 </div>
 <button (click)="updateServer()" class="btn btn-primary">Update server</button>
 <hr>
-<p *ngIf="showStatus">{{ serverName }}</p>
+<p *ngIf="showStatus;">{{ serverData }}</p>

@@ -7,8 +7,13 @@ import { Component } from '@angular/core';
 })
 export class EditComponent {
   serverName =""
+  serverData = {name:'',status:''}
+  selectedStatus= ""
+  online = false
   showStatus = false
   updateServer(){
-    this.showStatus = true
+  this.showStatus = true
+  this.serverData.name = this.serverName
+  this.serverData.status = this.selectedStatus
   }
 }
