@@ -11,4 +11,6 @@
 </div>
 <button (click)="updateServer()" class="btn btn-primary">Update server</button>
 <hr>
-<p *ngIf="showStatus;">{{ serverData }}</p>
+<ul *ngfor="let data of serverData" >
+    <li></li>
+</ul>

@@ -5,3 +5,10 @@ div {
   float: left;
   padding-right: 50px;
 }
+.containner {
+  display: flex;
+  flex-direction: row;
+}
+.userInfo {
+  margin-left: 30px;
+}

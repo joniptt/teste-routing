@@ -1,13 +1,23 @@
 <div class="containner">
   <ul class="nav nav-tabs">
-    <li role="presentation">
-    <a class="nav-link active" routerLink="/">Home</a>
+    <li>
+      <a
+        class="nav-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="active"
+        routerLink="/"
+        >Home</a
+      >
     </li>
-    <li role="presentation">
-      <a class="nav-link " routerLink="/users">Users</a>
+    <li>
+      <a class="nav-link" routerLinkActive="active" routerLink="/users"
+        >Users</a
+      >
     </li>
-    <li role="presentation">
-      <a class="nav-link" [routerLink]="['/servers']">Servers</a>
+    <li r>
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['servers']"
+        >Servers</a
+      >
     </li>
   </ul>
   <div class="comp">
