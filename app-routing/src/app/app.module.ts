@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { EditComponent } from './servers/edit-server/edit-server.component';
 import { ServerComponent } from './servers/server/server.component';
 import { ServersComponent } from './servers/servers.component';
+import { serverService } from './services/server.service';
 import { userService } from './user.service';
 import { UserComponent } from './users/user/user.component';
 import { UsersComponent } from './users/users.component';
@@ -17,6 +18,7 @@ const appRoutes: Routes = [
   { path: 'users', component: UsersComponent },
   { path: 'users/:id/:name', component: UserComponent },
   { path: 'servers', component: ServersComponent },
+  { path: 'servers/:id/edit', component: EditComponent },
 ];
 
 @NgModule({
@@ -35,7 +37,7 @@ const appRoutes: Routes = [
     FormsModule,
     RouterModule.forRoot(appRoutes),
   ],
-  providers: [userService],
+  providers: [userService, serverService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
