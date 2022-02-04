@@ -1,5 +1,13 @@
 <div>
-  <ul class="list-group">
-    <li class="list-group-item">Cras justo odio</li>
+  <ul *ngFor="let server of serversList; let i = index" class="list-group">
+    <a
+      [routerLink]="['/servers', server.id, server.status]"
+      (click)="sendServer(server)"
+      class="list-group-item list-group-item-action"
+      >{{ server.name }}</a
+    >
   </ul>
+</div>
+<div class="edit">
+  <app-edit></app-edit>
 </div>
