@@ -1,7 +1,7 @@
 <div>
   <ul *ngFor="let server of serversList; let i = index" class="list-group">
     <a
-      [routerLink]="['/servers', 1, 'edit']"
+      [routerLink]="['/servers', server.id, server.status]"
       (click)="sendServer(server)"
       class="list-group-item list-group-item-action"
       >{{ server.name }}</a

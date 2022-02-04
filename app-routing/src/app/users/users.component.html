@@ -1,6 +1,7 @@
 <div class="containner">
   <ul class="list-group">
     <a
+      [routerLink]="['/users', user.id, user.name]"
       *ngFor="let user of users"
       class="list-group-item list-group-item-action"
       >{{ user.name }}</a

@@ -20,6 +20,6 @@ export class EditComponent implements OnInit {
   }
 
   attServer() {
-    this.serverN.attStatus(this.serverStatus, this.serverName);
+    this.serverN.attStatus(this.serverStatus, this.serverName.name);
   }
 }

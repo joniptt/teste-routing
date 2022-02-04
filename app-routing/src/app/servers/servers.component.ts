@@ -7,7 +7,8 @@ import { serverService } from '../services/server.service';
   styleUrls: ['./servers.component.css'],
 })
 export class ServersComponent implements OnInit {
-  serversList: { name: string; status: string }[] = this.serverSend.serversMain;
+  serversList: { id: number; name: string; status: string }[] =
+    this.serverSend.serversMain;
 
   constructor(private serverSend: serverService) {}
   sendServer(server: {}) {
