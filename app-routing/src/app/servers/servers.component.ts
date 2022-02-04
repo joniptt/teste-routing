@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { serverService } from '../services/server.service';
 
 @Component({
   selector: 'app-servers',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servers.component.css'],
 })
 export class ServersComponent implements OnInit {
-  servers = [];
-  constructor() {}
+  serversList: { name: string; status: string }[] = this.serverSend.serversMain;
 
+  constructor(private serverSend: serverService) {}
+  sendServer(server: {}) {
+    this.serverSend.emitServer.emit(server);
+  }
   ngOnInit(): void {}
 }
