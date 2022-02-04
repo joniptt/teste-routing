@@ -8,8 +8,6 @@ import { serverService } from 'src/app/services/server.service';
 })
 export class ServerComponent {
   constructor(private serverSend: serverService) {}
-  @Input() serverS: { name: string; status: string };
-  sendServer() {
-    this.serverSend.emitServer.emit(this.serverS);
-  }
+ 
+  
 }
