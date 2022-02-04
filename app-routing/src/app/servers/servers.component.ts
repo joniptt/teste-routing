@@ -8,6 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   servers = [];
   constructor() {}
-  
+
   ngOnInit(): void {}
 }
