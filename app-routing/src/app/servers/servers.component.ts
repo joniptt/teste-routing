@@ -7,12 +7,12 @@ import { serverService } from '../services/server.service';
   styleUrls: ['./servers.component.css'],
 })
 export class ServersComponent implements OnInit {
-  serversList: { id: number; name: string; status: string }[] =
-    this.serverSend.serversMain;
+  serversList: { name: string; status: string }[] = this.serverSend.serversMain;
 
   constructor(private serverSend: serverService) {}
-  sendServer(server: {}) {
-    this.serverSend.emitServer.emit(server);
+  sendServer(server: { id: number; name: string; status: string }) {
+    this.serverSend.serverS(server);
   }
+
   ngOnInit(): void {}
 }

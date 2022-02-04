@@ -4,10 +4,11 @@
       [routerLink]="['/users', user.id, user.name]"
       *ngFor="let user of users"
       class="list-group-item list-group-item-action"
+      (click)="onUserSelect(user)"
       >{{ user.name }}</a
     >
   </ul>
   <div class="userInfo">
-    <app-user></app-user>
+    <router-outlet></router-outlet>
   </div>
 </div>

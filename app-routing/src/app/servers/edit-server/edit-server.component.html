@@ -5,13 +5,10 @@
 <label class="bold" for=""><b>Server Status</b></label>
 <div>
   <select class="custom-select" [(ngModel)]="serverStatus">
-    <option value="Online">Online</option>
+    <option selected value="Online">Online</option>
     <option value="Offline">Offline</option>
   </select>
 </div>
 <button (click)="attServer()" class="btn btn-primary">Update server</button>
 <hr />
-<div>
-  <div>{{ serverName.name }}</div>
-  <div>{{ serverName.status }}</div>
-</div>
+<div></div>

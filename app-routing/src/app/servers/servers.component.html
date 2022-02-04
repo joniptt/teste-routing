@@ -1,7 +1,9 @@
 <div>
   <ul *ngFor="let server of serversList; let i = index" class="list-group">
     <a
-      [routerLink]="['/servers', server.id, server.status]"
+      [routerLink]="['/servers', server.id]"
+      [queryParams]="{ allowedit: '1' }"
+      fragment="loading"
       (click)="sendServer(server)"
       class="list-group-item list-group-item-action"
       >{{ server.name }}</a
@@ -9,5 +11,5 @@
   </ul>
 </div>
 <div class="edit">
-  <app-edit></app-edit>
+  <router-outlet></router-outlet>
 </div>
